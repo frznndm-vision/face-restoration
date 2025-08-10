@@ -15,5 +15,5 @@
 
 | Input                       | GFPGAN                         | PSFRGAN                          | DFDNet                         | DeblurGANv2                                 | PMRF                       |
 | --------------------------- | ------------------------------ | -------------------------------- | ------------------------------ | ------------------------------------------- | -------------------------- |
-| ![input]() | ![gfpgan1](images/gfpgan1.jpg) | ![psfrgan1](images/psfrgan1.jpg) | ![dfdnet1](images/dfdnet1.jpg) | ![deblurganv2\_1](images/deblurganv2_1.jpg) | ![pmrf1](images/pmrf1.jpg) |
+| ![input]() | | ![psfrgan1](images/psfrgan1.jpg) | ![dfdnet1](images/dfdnet1.jpg) | ![deblurganv2\_1](images/deblurganv2_1.jpg) | ![pmrf1](images/pmrf1.jpg) |
 | ![input](images/input2.jpg) | ![gfpgan2](images/gfpgan2.jpg) | ![psfrgan2](images/psfrgan2.jpg) | ![dfdnet2](images/dfdnet2.jpg) | ![deblurganv2\_2](images/deblurganv2_2.jpg) | ![pmrf2](images/pmrf2.jpg) |
