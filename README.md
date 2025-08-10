@@ -1,3 +1,15 @@
+This repository provides a comprehensive suite of state-of-the-art face restoration and enhancement models for repairing and improving low-quality facial images. It is designed for researchers, developers, and enthusiasts who want to compare and apply multiple restoration methods in a single, easy-to-use framework.
+✨ Features
+
+    Multiple restoration approaches — From GAN-based generative priors to dictionary learning and semantic parsing.
+
+    Modular architecture — Easily switch between models for experimentation or benchmarking.
+
+    CPU and GPU support — Optimized configurations for different hardware setups.
+
+    Before/After visual comparisons — Quickly evaluate restoration quality.
+
+
 | Model           | Description                                                                                                                                         | Paper / Repo                                                                                                                                                                   | Highlights                                                                                                            |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
 | **GFPGAN**      | Blind face restoration using a **Generative Facial Prior** to reconstruct realistic facial details while preserving identity.                       | [Repo](https://github.com/TencentARC/GFPGAN) · [Paper](https://arxiv.org/abs/2101.04061) — *Towards Real-World Blind Face Restoration with Generative Facial Prior*            | Excellent perceptual quality, strong real-world performance, robust to various degradations.                          |
