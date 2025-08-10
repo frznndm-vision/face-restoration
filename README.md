@@ -1,13 +1,13 @@
 This repository provides a comprehensive suite of state-of-the-art face restoration and enhancement models for repairing and improving low-quality facial images. It is designed for researchers, developers, and enthusiasts who want to compare and apply multiple restoration methods in a single, easy-to-use framework.
 ✨ Features
 
-    Multiple restoration approaches — From GAN-based generative priors to dictionary learning and semantic parsing.
+Multiple restoration approaches — From GAN-based generative priors to dictionary learning and semantic parsing.
     
-    Modular architecture — Easily switch between models for experimentation or benchmarking.
+Modular architecture — Easily switch between models for experimentation or benchmarking.
     
-    CPU and GPU support — Optimized configurations for different hardware setups.
+CPU and GPU support — Optimized configurations for different hardware setups.
     
-    Before/After visual comparisons — Quickly evaluate restoration quality.
+Before/After visual comparisons — Quickly evaluate restoration quality.
 
 
 | Model           | Description                                                                                                                                         | Paper / Repo                                                                                                                                                                   | Highlights                                                                                                            |
