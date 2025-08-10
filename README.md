@@ -5,3 +5,15 @@
 | **DFDNet**      | Leverages a **dictionary of high-quality facial components** to restore structure and preserve facial identity from degraded inputs.                | [Repo](https://github.com/csxmli2016/DFDNet) · [Paper](https://arxiv.org/pdf/2009.08709) — *Blind Face Restoration via Deep Multi-scale Component Dictionaries* (ECCV 2020)    | Effective for severely degraded images, high identity preservation.                                                   |
 | **DeblurGANv2** | High-speed image deblurring using a **feature pyramid generator** and flexible backbones (MobileNet, Inception-ResNet).                             | [Repo](https://github.com/VITA-Group/DeblurGANv2) · [Paper](https://arxiv.org/abs/1908.03826) — *DeblurGAN-v2: Deblurring (Orders-of-Magnitude) Faster and Better*             | Extremely fast inference, adaptable to computational budgets, effective for motion and defocus blur.                  |
 | **PMRF**        | Two-stage method combining **Posterior Mean estimation** (minimizing distortion) and **Rectified Flow refinement** (maximizing perceptual realism). | [Repo](https://github.com/ohayonguy/PMRF) · [Paper](https://arxiv.org/abs/2410.00418) — *Posterior-Mean Rectified Flow: Towards Minimum MSE Photo-Realistic Image Restoration* | Theoretically grounded, achieves optimal distortion–perception trade-off, state-of-the-art in blind face restoration. |
+
+
+
+
+
+
+
+
+| Input                       | GFPGAN                         | PSFRGAN                          | DFDNet                         | DeblurGANv2                                 | PMRF                       |
+| --------------------------- | ------------------------------ | -------------------------------- | ------------------------------ | ------------------------------------------- | -------------------------- |
+| ![input]() | ![gfpgan1](images/gfpgan1.jpg) | ![psfrgan1](images/psfrgan1.jpg) | ![dfdnet1](images/dfdnet1.jpg) | ![deblurganv2\_1](images/deblurganv2_1.jpg) | ![pmrf1](images/pmrf1.jpg) |
+| ![input](images/input2.jpg) | ![gfpgan2](images/gfpgan2.jpg) | ![psfrgan2](images/psfrgan2.jpg) | ![dfdnet2](images/dfdnet2.jpg) | ![deblurganv2\_2](images/deblurganv2_2.jpg) | ![pmrf2](images/pmrf2.jpg) |
