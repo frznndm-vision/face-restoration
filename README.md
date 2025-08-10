@@ -2,11 +2,11 @@ This repository provides a comprehensive suite of state-of-the-art face restorat
 ✨ Features
 
     Multiple restoration approaches — From GAN-based generative priors to dictionary learning and semantic parsing.
-
+    
     Modular architecture — Easily switch between models for experimentation or benchmarking.
-
+    
     CPU and GPU support — Optimized configurations for different hardware setups.
-
+    
     Before/After visual comparisons — Quickly evaluate restoration quality.
 
 
