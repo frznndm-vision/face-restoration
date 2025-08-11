@@ -1,53 +1,61 @@
-# Face & Image Restoration Models (GFPGAN, PSFRGAN, DFDNet, DeblurGAN-v2, PMRF)
+# Face Restoration Comparison
 
-## 1. Project Overview
+A collection of Google Colab notebooks implementing five face restoration/deblurring models:
+GFPGAN, PSFRGAN, DFDNet, DeblurGAN-v2, and PMRF. Each notebook allows you to test restoration quality on the same input images and compare results seamlessly.
 
-This repository presents **five state-of-the-art image restoration models**, each bundled with a ready-to-run Jupyter Notebook designed for Google Colab. These models cover a variety of restoration tasks—from face recovery to motion deblurring—offering a versatile toolkit for researchers and practitioners alike.
+---
 
-## 2. Models & References
+## 1. Models & References
 
-- **GFPGAN** – *Towards Real-World Blind Face Restoration with Generative Facial Prior* (CVPR 2021). It leverages priors from a pretrained face GAN (e.g., StyleGAN) through spatial feature transforms, enabling fast and realistic face restoration and color enhancement in a single forward pass :contentReference[oaicite:0]{index=0}.
+- **GFPGAN** — *Towards Real-World Blind Face Restoration with Generative Facial Prior* (leverages rich generative facial priors from pretrained GANs using channel-split spatial feature transform layers for detailed, color-enhanced single-pass restoration) :contentReference[oaicite:0]{index=0}.
+- **PSFRGAN** — *Progressive Semantic-Aware Style Transformation for Blind Face Restoration* (utilizes multi-scale, semantic parsing map guidance for high-fidelity texture recovery).
+- **DFDNet** — *Blind Face Restoration via Deep Multi-scale Component Dictionaries* (employs component-level dictionaries to reconstruct facial details progressively).
+- **DeblurGAN-v2** — *Deblurring (Orders-of-Magnitude) Faster and Better* (introduces a relativistic conditional GAN with a double-scale discriminator and Feature Pyramid Network, achieving state-of-the-art performance and up to 100× faster inference with lightweight backbones) :contentReference[oaicite:1]{index=1}.
+- **PMRF** — *(Your model—describe it concisely here, e.g., methodology, motivations, and whether there is an associated paper or internal reference.)*
 
-- **PSFRGAN** – *Progressive Semantic-Aware Style Transformation for Blind Face Restoration* (CVPR 2021). This model employs a multi-scale, semantic-guided progressive style transformation, using parsing maps to modulate features from coarse to fine, boosted by a semantic-aware style loss, and supported by a pretrained face parsing network :contentReference[oaicite:1]{index=1}.
+---
 
-- **DFDNet** – *Deep Face Deblurring Network* (ECCV 2020) uses a component dictionary (e.g., eyes, nose, mouth) extracted from high-quality images to restore facial details progressively. Ideal when facial components are identifiable and reference-quality images are available.
+## 2. Comparison Table
 
-- **DeblurGAN-v2** – Presented in ICCV 2019, this GAN-based model with a Feature Pyramid Network (FPN) backbone (e.g., Inception-ResNet-v2 or MobileNet) offers efficient and high-quality motion deblurring for general images.
+| Model         | Strengths                                  | Limitations                     |
+|---------------|---------------------------------------------|----------------------------------|
+| GFPGAN        | Realistic, identity-preserving, color-restoring | Potential hallucination artifacts |
+| PSFRGAN       | Semantic-detail enhancement via parsing maps | Requires precise parsing inputs  |
+| DFDNet        | Interpretable, component-based restoration   | Limited to face region, needs dictionaries |
+| DeblurGAN-v2  | Fast, flexible, general-purpose              | Not tailored for fine facial detail |
+| PMRF          | *(Your observations—e.g., stronger on X)*     | *(Limitations you observed)*     |
 
-- **PMRF** – *Posterior-Mean Rectified Flow* (ICLR 2025). A recent flow-based approach optimized for minimizing the mean squared error (MSE), delivering highly accurate, photo-realistic image restoration.
+---
 
-## 3. Getting Started – Usage Guide
+## 3. Usage Instructions (Google Colab)
 
-For each model’s notebook:
+Each model has its own Colab notebook (`GFPGAN_colab.ipynb`, `PSFRGAN_colab.ipynb`, etc.) containing:
 
-1. Open the corresponding `.ipynb` file in Google Colab.
-2. Install dependencies (e.g., `pip install -r requirements.txt`).
-3. Upload or link the required pretrained models and test images.
-4. Run the cells sequentially to observe restoration results.
+1. **Setup**: Installs dependencies and clones the relevant repo.
+2. **Model Loading**: Downloads and initializes pretrained weights.
+3. **Inference**: Runs restoration on sample images or user uploads.
+4. **Outputs**: Saves results under `outputs/<model>/`.
 
-Feel free to customize input paths or tweak parameters to fit your use case.
+**To use:**
 
-## 4. Model Comparison
+1. Open the desired `.ipynb` in Colab.
+2. Select GPU as runtime type.
+3. Upload input images into the designated input folder in Colab.
+4. Run all cells to generate outputs. Outputs will appear in `outputs/<model>/`.
 
-| Model           | Task                        | Strengths                                      | Notes / Considerations                             |
-|----------------|-----------------------------|-----------------------------------------------|----------------------------------------------------|
-| **GFPGAN**      | Face restoration + color    | Realistic, preserves identity, fast inference   | Focused on facial regions; background less treated |
-| **PSFRGAN**     | Semantic face enhancement   | Multi-scale, parsing-guided detail restoration  | Requires parsing maps and more setup               |
-| **DFDNet**      | Component-based face deblur | Component-level detail reproduction             | Needs component dictionary; best for aligned faces |
-| **DeblurGAN-v2**| General motion deblurring   | High speed and quality, backbone flexibility    | General images; not specialized for faces          |
-| **PMRF**        | Accurate MSE-optimized restoration | Photorealistic results                        | Newer model with possibly less available tooling   |
+---
 
-## 5. Recommended Use Cases
+## 4. Sample Results Table
 
-- **GFPGAN**: Ideal for restoring degraded face images or enhancing old photos while preserving identity.
-- **PSFRGAN**: Best when you want semantically meaningful, refined detail restoration with control over face components.
-- **DFDNet**: Use when component-level restoration is critical and reference data is available.
-- **DeblurGAN-v2**: Optimal for general deblurring needs, such as motion-blurred photos.
-- **PMRF**: Ideal when achieving the lowest MSE and highest pixel-level fidelity is the priority.
+Compare the visual results across models using this table template:
 
-## 6. Citations
+```markdown
+## Sample Restoration Comparisons
 
-If you use any of these models in publications, please cite them accordingly:
-
-```bibtex
-@InProceedings{wang2021
+| Original Image | GFPGAN Output | PSFRGAN Output | DFDNet Output | DeblurGAN-v2 Output | PMRF Output |
+|----------------|----------------|----------------|----------------|----------------------|-------------|
+| Sample 1       | `![GFPGAN1](path/to/gfpgan1.png)` | `![PSFR1](path/to/psfr1.png)` | `![DFD1](path/to/dfd1.png)` | `![Deblur1](path/to/deblur1.png)` | `![PMRF1](path/to/pmrf1.png)` |
+| Sample 2       | `![GFPGAN2](...)` | ...            | ...            | ...                  | ...         |
+| Sample 3       | ...            | ...            | ...            | ...                  | ...         |
+| Sample 4       | ...            | ...            | ...            | ...                  | ...         |
+| Sample 5       | ...            | ...            | ...            | ...                  | ...         |
