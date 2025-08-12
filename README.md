@@ -9,9 +9,8 @@ GFPGAN, PSFRGAN, DFDNet, DeblurGAN-v2, and PMRF. Each notebook allows you to tes
 
 - **GFPGAN** — Generative Facial Prior for Blind Face Restoration
 GFP-GAN uses a pretrained face GAN (Generative Facial Prior) to restore realistic and identity-preserving facial details from low-quality inputs. With novel channel-split spatial feature transform layers, it balances realness and fidelity in a single forward pass, avoiding the expensive per-image optimization required by GAN inversion. It simultaneously restores details and enhances colors, delivering superior results on both synthetic and real-world datasets.
-- **PSFRGAN** — Progressive Semantic-Aware Style Transformation for Face Restoration
-PSFR-GAN restores high-quality, realistic faces from low-quality images by combining pixel information with semantic guidance from parsing maps. Unlike traditional encoder–decoder designs, it applies multi-scale coarse-to-fine restoration via semantic-aware style transfer. A semantic-aware style loss improves texture details per facial region, and a pretrained parsing network ensures reliable semantic maps even from degraded inputs.
-- **DFDNet** — Deep Face Dictionary Network for Face Restoration
+- **CODEFORMER** — Transformer-Based Codebook Prior for Blind Face Restoration
+CodeFormer restores high-quality, realistic faces from degraded inputs by reframing restoration as a discrete code prediction problem. A learned codebook prior in a compact latent space reduces ambiguity and provides rich “visual atoms” for reconstruction. Its Transformer-based prediction network models global composition and context, enabling faithful recovery even from severely degraded images. A controllable feature transformation module allows flexible adjustment between fidelity and quality, making the method robust across diverse degradation types and achieving state-of-the-art performance on synthetic and real-world datasets.
 DFDNet restores degraded face images by matching input facial components (eyes, nose, mouth) to a pretrained deep dictionary built from high-quality images using K-means clustering. Without needing a high-quality reference image of the same identity, it transfers fine details through a dictionary feature transfer (DFT) block that applies component-wise adaptive instance normalization (AdaIN) to align styles and uses a confidence score to adaptively fuse features. A multi-scale coarse-to-fine pipeline progressively refines the restoration for realistic outputs on real degraded faces.
 - **DeblurGAN-v2** — End-to-End Generative Adversarial Network for Motion Deblurring
 DeblurGAN-v2 introduces a novel relativistic conditional GAN with a double-scale discriminator designed for single-image motion deblurring. It is the first to incorporate a Feature Pyramid Network (FPN) into the generator, enabling flexible use of various backbones to balance performance and efficiency.
@@ -26,7 +25,7 @@ PMRF proposes a novel approach to image restoration that aims to minimize distor
 | Model         | Strengths                                     | Limitations                          |
 |---------------|-----------------------------------------------|--------------------------------------|
 | GFPGAN        | Realistic, identity-preserving, color-rich results; efficient single-pass restoration; superior performance over earlier methods.     | Struggles with extremely degraded inputs and large pose variations; may introduce color bias when input lacks color information. |
-| PSFRGAN       | Semantic-detail enhancement using parsing maps | Restoration quality depends on the accuracy of parsing maps     |
+| CODEFORMER       | Reduces ambiguity via discrete codebook prior, captures global context with Transformer, and offers controllable fidelity–quality trade-off. | May alter identity on extreme degradations, depends on codebook coverage, and adds computational overhead.    |
 | DFDNet        | Limited to restoring facial components present in the dictionary, so it depends on the quality and coverage of the dictionary.    | Interpretable, component-based restoration that does not require identity-specific reference images. |
 | DeblurGAN-v2  | Flexible and efficient deblurring with state-of-the-art quality, scalable from real-time lightweight models to high-performance backbones.     | Higher accuracy requires heavy backbones, which increase computational cost and reduce speed. |
 | PMRF          | Achieves superior photo-realistic restoration by optimally balancing distortion minimization and perfect perceptual quality using flow-based optimal transport.        | Requires complex training and higher computational resources due to the flow-based rectification step.      |
@@ -56,7 +55,7 @@ Each model has its own Colab notebook (e.g., `GFPGAN_colab.ipynb`, `PSFRGAN_cola
 
 ## Sample Restoration Comparisons
 
-| Original Image | GFPGAN Output | PSFRGAN Output | DFDNet Output | DeblurGAN-v2 Output | PMRF Output |
+| Original Image | GFPGAN Output | CODEFORMER Output | DFDNet Output | DeblurGAN-v2 Output | PMRF Output |
 |----------------|--------------|----------------|---------------|---------------------|-------------|
 | ![1](https://github.com/user-attachments/assets/3e87edb6-bf80-4938-84dd-236d347d710f) | ![GFPGAN1](https://github.com/user-attachments/assets/f69b4b46-b382-4877-81ed-4ae4219ee0b8) | ![PSFR1](path/to/psfr1.png) | ![DFD1](path/to/dfd1.png) | ![Deblur1](path/to/deblur1.png) | ![PMRF1](path/to/pmrf1.png) |
 | ![2](https://github.com/user-attachments/assets/cbae896d-fa8c-4e26-a8f6-c76b2dbd5567) |![2](https://github.com/user-attachments/assets/060fd1de-9829-4fdb-886a-59f56415ea96)
@@ -71,9 +70,9 @@ Each model has its own Colab notebook (e.g., `GFPGAN_colab.ipynb`, `PSFRGAN_cola
   Wang et al., *GFP-GAN: Towards Real-World Blind Face Restoration with Generative Facial Prior*, 2021.  
   [arXiv](https://arxiv.org/abs/2101.04061) | [GitHub](https://github.com/TencentARC/GFPGAN)
 
-- **PSFR-GAN:**  
-  Zhang et al., *PSFR-GAN: Progressive Semantic-Aware Style Transformation for Blind Face Restoration*, 2020.  
-  [arXiv](https://arxiv.org/abs/2009.08709) | [GitHub](https://github.com/chaofengc/PSFR-GAN)
+- **CODEFORMER:**  
+  Zhou et al., *Towards Robust Blind Face Restoration with Codebook Lookup Transformer*, 2022.
+  [arXiv](https://arxiv.org/abs/2206.11253) | [GitHub](https://github.com/sczhou/CodeFormer)
 
 - **DFDNet:**  
   Li et al., *Blind Face Restoration via Deep Multi-scale Component Dictionaries*, 2020.  
