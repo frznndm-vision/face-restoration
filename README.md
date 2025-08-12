@@ -53,7 +53,8 @@ Use the following template to present visual comparisons:
 
 | Original Image | GFPGAN Output | PSFRGAN Output | DFDNet Output | DeblurGAN-v2 Output | PMRF Output |
 |----------------|----------------|----------------|----------------|----------------------|-------------|
-| Sample 1       | `![GFPGAN1](path/to/gfpgan1.png)` | `![PSFR1](path/to/psfr1.png)` | `![DFD1](path/to/dfd1.png)` | `![Deblur1](path/to/deblur1.png)` | `![PMRF1](path/to/pmrf1.png)` |
+| ![1](https://github.com/user-attachments/assets/3e87edb6-bf80-4938-84dd-236d347d710f)
+   | `![GFPGAN1](path/to/gfpgan1.png)` | `![PSFR1](path/to/psfr1.png)` | `![DFD1](path/to/dfd1.png)` | `![Deblur1](path/to/deblur1.png)` | `![PMRF1](path/to/pmrf1.png)` |
 | Sample 2       | `![GFPGAN2](...)` | ...            | ...            | ...                  | ...         |
 | Sample 3       | ...            | ...            | ...            | ...                  | ...         |
 | Sample 4       | ...            | ...            | ...            | ...                  | ...         |
