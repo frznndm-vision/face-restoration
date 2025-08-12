@@ -5,7 +5,7 @@ GFPGAN, PSFRGAN, DFDNet, DeblurGAN-v2, and PMRF. Each notebook allows you to tes
 
 ---
 
-## 1. Models & References
+## 1. Models 
 
 - **GFPGAN** — Generative Facial Prior for Blind Face Restoration
 GFP-GAN uses a pretrained face GAN (Generative Facial Prior) to restore realistic and identity-preserving facial details from low-quality inputs. With novel channel-split spatial feature transform layers, it balances realness and fidelity in a single forward pass, avoiding the expensive per-image optimization required by GAN inversion. It simultaneously restores details and enhances colors, delivering superior results on both synthetic and real-world datasets.
@@ -16,8 +16,9 @@ DFDNet restores degraded face images by matching input facial components (eyes, 
 - **DeblurGAN-v2** — End-to-End Generative Adversarial Network for Motion Deblurring
 DeblurGAN-v2 introduces a novel relativistic conditional GAN with a double-scale discriminator designed for single-image motion deblurring. It is the first to incorporate a Feature Pyramid Network (FPN) into the generator, enabling flexible use of various backbones to balance performance and efficiency.
 With heavy backbones like Inception-ResNet-v2, it achieves state-of-the-art deblurring quality. Using lightweight backbones such as MobileNet variants, it runs 10 to 100 times faster than competitors while maintaining comparable results—making it suitable for real-time video deblurring. The architecture is also adaptable to other image restoration tasks.
-- **PMRF** — *(Your own model—please describe its methodology, motivation, and any internal or external references.)*
-
+- **PMRF** — PMRF (Posterior-Mean Rectified Flow)
+Photo-realistic Image Restoration via Optimal Transport
+PMRF proposes a novel approach to image restoration that aims to minimize distortion (MSE) while perfectly preserving perceptual quality, meaning the restored images follow the exact distribution of ground-truth images. Unlike typical methods balancing distortion and perceptual losses, PMRF constructs an optimal estimator by first predicting the posterior mean (MMSE estimate) and then transforming it using a rectified flow model that approximates an optimal transport map. This two-step process better aligns restored images with true data distribution, leading to improved photo-realistic quality.
 ---
 
 ## 2. Comparison Table
@@ -28,7 +29,7 @@ With heavy backbones like Inception-ResNet-v2, it achieves state-of-the-art debl
 | PSFRGAN       | Semantic-detail enhancement using parsing maps | Restoration quality depends on the accuracy of parsing maps     |
 | DFDNet        | Limited to restoring facial components present in the dictionary, so it depends on the quality and coverage of the dictionary.    | Interpretable, component-based restoration that does not require identity-specific reference images. |
 | DeblurGAN-v2  | Flexible and efficient deblurring with state-of-the-art quality, scalable from real-time lightweight models to high-performance backbones.     | Higher accuracy requires heavy backbones, which increase computational cost and reduce speed. |
-| PMRF          | *(Your observations—e.g. excels at…)*          | *(Limitations you’ve noticed)*       |
+| PMRF          | Achieves superior photo-realistic restoration by optimally balancing distortion minimization and perfect perceptual quality using flow-based optimal transport.        | Requires complex training and higher computational resources due to the flow-based rectification step.      |
 
 ---
 
