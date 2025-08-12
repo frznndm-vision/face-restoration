@@ -24,7 +24,7 @@ DFDNet restores degraded face images by matching input facial components (eyes, 
 |---------------|-----------------------------------------------|--------------------------------------|
 | GFPGAN        | Realistic, identity-preserving, color-rich results; efficient single-pass restoration; superior performance over earlier methods.     | Struggles with extremely degraded inputs and large pose variations; may introduce color bias when input lacks color information. |
 | PSFRGAN       | Semantic-detail enhancement using parsing maps | Restoration quality depends on the accuracy of parsing maps     |
-| DFDNet        | Interpretable, component-based restoration     | Limited to facial components, needs dictionary |
+| DFDNet        | Limited to restoring facial components present in the dictionary, so it depends on the quality and coverage of the dictionary.    | Interpretable, component-based restoration that does not require identity-specific reference images. |
 | DeblurGAN-v2  | Fast, flexible, general-purpose deblurring     | Not specialized for fine facial detail |
 | PMRF          | *(Your observations—e.g. excels at…)*          | *(Limitations you’ve noticed)*       |
 
