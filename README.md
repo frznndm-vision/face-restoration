@@ -13,7 +13,9 @@ GFP-GAN uses a pretrained face GAN (Generative Facial Prior) to restore realisti
 PSFR-GAN restores high-quality, realistic faces from low-quality images by combining pixel information with semantic guidance from parsing maps. Unlike traditional encoder–decoder designs, it applies multi-scale coarse-to-fine restoration via semantic-aware style transfer. A semantic-aware style loss improves texture details per facial region, and a pretrained parsing network ensures reliable semantic maps even from degraded inputs.
 - **DFDNet** — Deep Face Dictionary Network for Face Restoration
 DFDNet restores degraded face images by matching input facial components (eyes, nose, mouth) to a pretrained deep dictionary built from high-quality images using K-means clustering. Without needing a high-quality reference image of the same identity, it transfers fine details through a dictionary feature transfer (DFT) block that applies component-wise adaptive instance normalization (AdaIN) to align styles and uses a confidence score to adaptively fuse features. A multi-scale coarse-to-fine pipeline progressively refines the restoration for realistic outputs on real degraded faces.
-- **DeblurGAN-v2** — *Deblurring (Orders-of-Magnitude) Faster and Better* (introduces a relativistic conditional GAN with a dual-scale discriminator and Feature Pyramid Network for flexible backbones—achieving up to 10–100× faster deblurring while retaining near state-of-the-art quality) :contentReference[oaicite:1]{index=1}.
+- **DeblurGAN-v2** — End-to-End Generative Adversarial Network for Motion Deblurring
+DeblurGAN-v2 introduces a novel relativistic conditional GAN with a double-scale discriminator designed for single-image motion deblurring. It is the first to incorporate a Feature Pyramid Network (FPN) into the generator, enabling flexible use of various backbones to balance performance and efficiency.
+With heavy backbones like Inception-ResNet-v2, it achieves state-of-the-art deblurring quality. Using lightweight backbones such as MobileNet variants, it runs 10 to 100 times faster than competitors while maintaining comparable results—making it suitable for real-time video deblurring. The architecture is also adaptable to other image restoration tasks.
 - **PMRF** — *(Your own model—please describe its methodology, motivation, and any internal or external references.)*
 
 ---
@@ -25,7 +27,7 @@ DFDNet restores degraded face images by matching input facial components (eyes, 
 | GFPGAN        | Realistic, identity-preserving, color-rich results; efficient single-pass restoration; superior performance over earlier methods.     | Struggles with extremely degraded inputs and large pose variations; may introduce color bias when input lacks color information. |
 | PSFRGAN       | Semantic-detail enhancement using parsing maps | Restoration quality depends on the accuracy of parsing maps     |
 | DFDNet        | Limited to restoring facial components present in the dictionary, so it depends on the quality and coverage of the dictionary.    | Interpretable, component-based restoration that does not require identity-specific reference images. |
-| DeblurGAN-v2  | Fast, flexible, general-purpose deblurring     | Not specialized for fine facial detail |
+| DeblurGAN-v2  | Flexible and efficient deblurring with state-of-the-art quality, scalable from real-time lightweight models to high-performance backbones.     | Higher accuracy requires heavy backbones, which increase computational cost and reduce speed. |
 | PMRF          | *(Your observations—e.g. excels at…)*          | *(Limitations you’ve noticed)*       |
 
 ---
