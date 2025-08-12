@@ -65,26 +65,26 @@ Each model has its own Colab notebook (e.g., `GFPGAN_colab.ipynb`, `PSFRGAN_cola
 | ![4](https://github.com/user-attachments/assets/498c36b8-9f2c-4340-9285-625b44cbd234) | ![GFPGAN4](path/to/gfpgan4.png) | ![PSFR4](path/to/psfr4.png) | ![DFD4](path/to/dfd4.png) | ![Deblur4](path/to/deblur4.png) | ![PMRF4](path/to/pmrf4.png) |
 | <img width="114" height="142" alt="7" src="https://github.com/user-attachments/assets/9333c797-2517-440b-8deb-2af083d583ef" /> | ![GFPGAN7](path/to/gfpgan7.png) | ![PSFR7](path/to/psfr7.png) | ![DFD7](path/to/dfd7.png) | ![Deblur7](path/to/deblur7.png) | ![PMRF7](path/to/pmrf7.png) |
 
-
 ## References
 
 - **GFP-GAN:**  
   Wang et al., *GFP-GAN: Towards Real-World Blind Face Restoration with Generative Facial Prior*, 2021.  
-  [https://arxiv.org/abs/2101.04061](https://arxiv.org/abs/2101.04061)
+  [arXiv](https://arxiv.org/abs/2101.04061) | [GitHub](https://github.com/TencentARC/GFPGAN)
 
 - **PSFR-GAN:**  
   Zhang et al., *PSFR-GAN: Progressive Semantic-Aware Style Transformation for Blind Face Restoration*, 2020.  
-  [https://arxiv.org/abs/2009.08709](https://arxiv.org/abs/2009.08709)
+  [arXiv](https://arxiv.org/abs/2009.08709) | [GitHub](https://github.com/chaofengc/PSFR-GAN)
 
 - **DFDNet:**  
   Li et al., *Blind Face Restoration via Deep Multi-scale Component Dictionaries*, 2020.  
-  [https://arxiv.org/abs/2008.00418](https://arxiv.org/abs/2008.00418)
+  [arXiv](https://arxiv.org/abs/2008.00418) | [GitHub](https://github.com/csjliang/DFDNet)
 
 - **DeblurGAN-v2:**  
   Kupyn et al., *DeblurGAN-v2: Deblurring (Orders-of-Magnitude) Faster and Better*, 2019.  
-  [https://arxiv.org/abs/1908.03826](https://arxiv.org/abs/1908.03826)
+  [arXiv](https://arxiv.org/abs/1908.03826) | [GitHub](https://github.com/KupynOrest/DeblurGANv2)
 
 - **PMRF:**  
   Saharia et al., *Posterior-Mean Rectified Flow for Image Restoration*, 2021.  
-  [https://arxiv.org/abs/2112.03563](https://arxiv.org/abs/2112.03563)
+  [arXiv](https://arxiv.org/abs/2112.03563) | [GitHub](https://github.com/saharia/pmrf)
+
 
