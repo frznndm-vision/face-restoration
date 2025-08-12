@@ -7,7 +7,7 @@ GFPGAN, PSFRGAN, DFDNet, DeblurGAN-v2, and PMRF. Each notebook allows you to tes
 
 ## 1. Models & References
 
-- **GFPGAN** — *Towards Real-World Blind Face Restoration with Generative Facial Prior* (leverages rich generative priors from a pretrained face GAN via channel-split spatial feature transform layers for detailed, color-enhanced single-pass restoration) :contentReference[oaicite:0]{index=0}.
+- **GFPGAN** — GFPGAN is a blind face restoration method that uses a pretrained face GAN as a Generative Facial Prior to restore realistic and faithful facial details, even from very low-quality inputs. By introducing novel channel-split spatial feature transform layers, it balances realness and fidelity in a single forward pass—no expensive per-image optimization required. GFP-GAN can restore fine details and enhance colors simultaneously, outperforming prior methods on both synthetic and real-world datasets.
 - **PSFRGAN** — *Progressive Semantic-Aware Style Transformation for Blind Face Restoration* (utilizes multi-scale, semantic parsing map guidance for high-fidelity texture recovery).
 - **DFDNet** — *Blind Face Restoration via Deep Multi-scale Component Dictionaries* (employs component-level dictionaries to reconstruct facial details progressively).
 - **DeblurGAN-v2** — *Deblurring (Orders-of-Magnitude) Faster and Better* (introduces a relativistic conditional GAN with a dual-scale discriminator and Feature Pyramid Network for flexible backbones—achieving up to 10–100× faster deblurring while retaining near state-of-the-art quality) :contentReference[oaicite:1]{index=1}.
