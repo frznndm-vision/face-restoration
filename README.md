@@ -19,7 +19,7 @@ GFPGAN, PSFRGAN, DFDNet, DeblurGAN-v2, and PMRF. Each notebook allows you to tes
 
 | Model         | Strengths                                     | Limitations                          |
 |---------------|-----------------------------------------------|--------------------------------------|
-| GFPGAN        | Realistic, identity-preserving, color-rich     | May introduce hallucination artifacts |
+| GFPGAN        | Realistic, identity-preserving, color-rich results; efficient single-pass restoration; superior performance over earlier methods.     | Struggles with extremely degraded inputs and large pose variations; may introduce color bias when input lacks color information. |
 | PSFRGAN       | Semantic-detail enhancement using parsing maps | Depends on accurate parsing maps     |
 | DFDNet        | Interpretable, component-based restoration     | Limited to facial components, needs dictionary |
 | DeblurGAN-v2  | Fast, flexible, general-purpose deblurring     | Not specialized for fine facial detail |
