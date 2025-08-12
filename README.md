@@ -77,7 +77,7 @@ Each model has its own Colab notebook (e.g., `GFPGAN_colab.ipynb`, `PSFRGAN_cola
 
 - **DFDNet:**  
   Li et al., *Blind Face Restoration via Deep Multi-scale Component Dictionaries*, 2020.  
-  [arXiv](https://arxiv.org/abs/2008.00418) | [GitHub](https://github.com/csjliang/DFDNet)
+  [arXiv](https://arxiv.org/abs/2008.00418) | [GitHub](https://github.com/csxmli2016/DFDNet)
 
 - **DeblurGAN-v2:**  
   Kupyn et al., *DeblurGAN-v2: Deblurring (Orders-of-Magnitude) Faster and Better*, 2019.  
@@ -85,6 +85,6 @@ Each model has its own Colab notebook (e.g., `GFPGAN_colab.ipynb`, `PSFRGAN_cola
 
 - **PMRF:**  
   Saharia et al., *Posterior-Mean Rectified Flow for Image Restoration*, 2021.  
-  [arXiv](https://arxiv.org/abs/2112.03563) | [GitHub](https://github.com/saharia/pmrf)
+  [arXiv](https://arxiv.org/abs/2112.03563) | [GitHub](https://github.com/ohayonguy/PMRF)
 
 
