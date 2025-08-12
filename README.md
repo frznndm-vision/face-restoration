@@ -49,7 +49,6 @@ Each model has its own Colab notebook (e.g., `GFPGAN_colab.ipynb`, `PSFRGAN_cola
 
 ## 4. Sample Results Table
 
-Use the following template to present visual comparisons:
 
 ## Sample Restoration Comparisons
 
