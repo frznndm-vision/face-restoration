@@ -54,7 +54,8 @@ Use the following template to present visual comparisons:
 | Original Image | GFPGAN Output | PSFRGAN Output | DFDNet Output | DeblurGAN-v2 Output | PMRF Output |
 |----------------|--------------|----------------|---------------|---------------------|-------------|
 | ![1](https://github.com/user-attachments/assets/3e87edb6-bf80-4938-84dd-236d347d710f) | ![GFPGAN1](https://github.com/user-attachments/assets/f69b4b46-b382-4877-81ed-4ae4219ee0b8) | ![PSFR1](path/to/psfr1.png) | ![DFD1](path/to/dfd1.png) | ![Deblur1](path/to/deblur1.png) | ![PMRF1](path/to/pmrf1.png) |
-| ![2](https://github.com/user-attachments/assets/cbae896d-fa8c-4e26-a8f6-c76b2dbd5567) | ![GFPGAN2](path/to/gfpgan2.png) | ![PSFR2](path/to/psfr2.png) | ![DFD2](path/to/dfd2.png) | ![Deblur2](path/to/deblur2.png) | ![PMRF2](path/to/pmrf2.png) |
+| ![2](https://github.com/user-attachments/assets/cbae896d-fa8c-4e26-a8f6-c76b2dbd5567) |![2](https://github.com/user-attachments/assets/060fd1de-9829-4fdb-886a-59f56415ea96)
+  | ![PSFR2](path/to/psfr2.png) | ![DFD2](path/to/dfd2.png) | ![Deblur2](path/to/deblur2.png) | ![PMRF2](path/to/pmrf2.png) |
 | <img width="114" height="142" alt="3" src="https://github.com/user-attachments/assets/6670c5d6-af50-4534-9378-b3a7f97243f6" /> | ![GFPGAN3](path/to/gfpgan3.png) | ![PSFR3](path/to/psfr3.png) | ![DFD3](path/to/dfd3.png) | ![Deblur3](path/to/deblur3.png) | ![PMRF3](path/to/pmrf3.png) |
 | ![4](https://github.com/user-attachments/assets/498c36b8-9f2c-4340-9285-625b44cbd234) | ![GFPGAN4](path/to/gfpgan4.png) | ![PSFR4](path/to/psfr4.png) | ![DFD4](path/to/dfd4.png) | ![Deblur4](path/to/deblur4.png) | ![PMRF4](path/to/pmrf4.png) |
 | <img width="114" height="142" alt="7" src="https://github.com/user-attachments/assets/9333c797-2517-440b-8deb-2af083d583ef" /> | ![GFPGAN7](path/to/gfpgan7.png) | ![PSFR7](path/to/psfr7.png) | ![DFD7](path/to/dfd7.png) | ![Deblur7](path/to/deblur7.png) | ![PMRF7](path/to/pmrf7.png) |
